@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectModel.ConsoleApp
 {
-    public class ConsoleService
+    public class ConsoleService : IDisposable
     {
         private readonly ILivrosService livroService;
 
@@ -26,5 +26,8 @@ namespace ProjectModel.ConsoleApp
 
             return retorno;
         }
+
+        public void Dispose()
+        { }
     }
 }
